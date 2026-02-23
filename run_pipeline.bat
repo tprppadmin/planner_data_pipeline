@@ -1,7 +1,9 @@
 @echo off
 setlocal
 
-set "PROJECT_DIR=C:\Users\TPRPowerPlatformAdmi\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline"
+
+
+set "PROJECT_DIR=C:\clients\tpr\planner_data_pipeline"
 cd /d "%PROJECT_DIR%"
 
 call "%PROJECT_DIR%\.venv\Scripts\activate.bat"

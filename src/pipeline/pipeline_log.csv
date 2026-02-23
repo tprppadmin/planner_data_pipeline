@@ -207,3 +207,115 @@ requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='graph.microsoft.com',
 20260223_113735,pipeline.dim_buckets,2026-02-23 12:09:31,2026-02-23 12:11:40,128.4,success,
 20260223_113735,pipeline.fact_sub_tasks,2026-02-23 12:11:40,2026-02-23 12:40:04,1704.0,success,
 20260223_113735,pipeline.fact_tasks_prod,2026-02-23 12:40:04,2026-02-23 12:40:07,3.8,success,
+20260223_150956,pipeline.dim_events,2026-02-23 15:09:56,2026-02-23 15:17:43,467.4,success,
+20260223_150956,pipeline.fact_tasks_staging,2026-02-23 15:17:43,2026-02-23 16:03:58,2774.4,success,
+20260223_150956,pipeline.dim_labels,2026-02-23 16:03:58,2026-02-23 16:07:51,233.7,success,
+20260223_150956,pipeline.dim_buckets,2026-02-23 16:07:51,2026-02-23 16:08:16,24.8,failed,"Exit code 1. Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 488, in _make_request
+    raise new_e
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 464, in _make_request
+    self._validate_conn(conn)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 1093, in _validate_conn
+    conn.connect()
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1041, in _create
+    self.do_handshake()
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\retry.py"", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\util.py"", line 38, in reraise
+    raise value.with_traceback(tb)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 488, in _make_request
+    raise new_e
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 464, in _make_request
+    self._validate_conn(conn)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 1093, in _validate_conn
+    conn.connect()
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1041, in _create
+    self.do_handshake()
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\dim_buckets.py"", line 153, in <module>
+    main()
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\dim_buckets.py"", line 136, in main
+    df_buckets = pull_buckets(headers)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\dim_buckets.py"", line 31, in pull_buckets
+    buckets = graph_get_all(
+              ^^^^^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\graph.py"", line 99, in graph_get_all
+    data = graph_get(url, headers, params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\graph.py"", line 63, in graph_get
+    r = requests.get(url, headers=headers, params=params, timeout=timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\api.py"", line 73, in get
+    return request(""get"", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 659, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
