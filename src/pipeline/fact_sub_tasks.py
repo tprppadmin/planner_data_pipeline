@@ -7,10 +7,11 @@ import requests
 from pipeline.graph import GRAPH, get_graph_headers, graph_get
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+SHAREPOINT_ROOT = Path(r"C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline")
 
-PROD_FACT_TASKS_PATH = PROJECT_ROOT / "data" / "staging" / "Fact_Tasks.csv"
-PROD_FACT_SUB_TASKS_PATH = PROJECT_ROOT / "data" / "prod" / "Fact_Sub_Tasks.csv"
+
+PROD_FACT_TASKS_PATH = SHAREPOINT_ROOT / "data" / "staging" / "Fact_Tasks.csv"
+PROD_FACT_SUB_TASKS_PATH = SHAREPOINT_ROOT / "data" / "prod" / "Fact_Sub_Tasks.csv"
 
 
 def get_user(user_id: str, headers: dict) -> dict:

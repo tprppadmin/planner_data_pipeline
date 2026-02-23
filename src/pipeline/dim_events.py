@@ -11,8 +11,9 @@ from pipeline.graph import GRAPH, get_graph_headers, graph_get_all
 # -----------------------------
 # Path helpers (works from any folder)
 # -----------------------------
-PROJECT_ROOT = Path(__file__).resolve().parents[2]   # .../planner_data_pipeline
-DATA_DIR = PROJECT_ROOT / "data/prod"
+SHAREPOINT_ROOT = Path(r"C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\data")
+
+DATA_DIR = SHAREPOINT_ROOT / "prod"
 DIM_EVENTS_PATH = DATA_DIR / "Dim_Events.csv"
 
 # -----------------------------

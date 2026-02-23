@@ -6,13 +6,13 @@ import datetime as dt
 
 from pipeline.graph import GRAPH, get_graph_headers, graph_get_all, graph_get
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]   # .../planner_data_pipeline
+SHAREPOINT_ROOT = Path(r"C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline")
 
-DATA_DIR = PROJECT_ROOT / "data/prod"
+DATA_DIR = SHAREPOINT_ROOT / "data/prod"
 DIM_EVENTS_PATH = DATA_DIR / "Dim_Events.csv"
 
 
-STAGING_DIR = PROJECT_ROOT / "data/staging"
+STAGING_DIR = SHAREPOINT_ROOT / "data/staging"
 STAGING_FACT_TASKS_PATH = STAGING_DIR / "Fact_Tasks.csv"
 
 

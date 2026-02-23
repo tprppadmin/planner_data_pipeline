@@ -5,12 +5,12 @@ from pathlib import Path
 from pipeline.graph import GRAPH, get_graph_headers, graph_get_all
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+SHAREPOINT_ROOT = Path(r"C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline")
 
-STAGING_FACT_TASKS_PATH = PROJECT_ROOT / "data" / "staging" / "Fact_Tasks.csv"
+STAGING_FACT_TASKS_PATH = SHAREPOINT_ROOT / "data" / "staging" / "Fact_Tasks.csv"
 
-PROD_DIM_BUCKETS_PATH = PROJECT_ROOT / "data" / "prod" / "Dim_Buckets.csv"
-STAGING_DIM_BUCKETS_PATH = PROJECT_ROOT / "data" / "staging" / "Dim_Buckets.csv"
+PROD_DIM_BUCKETS_PATH = SHAREPOINT_ROOT / "data" / "prod" / "Dim_Buckets.csv"
+STAGING_DIM_BUCKETS_PATH = SHAREPOINT_ROOT / "data" / "staging" / "Dim_Buckets.csv"
 
 
 def pull_buckets(headers: dict) -> pd.DataFrame:
