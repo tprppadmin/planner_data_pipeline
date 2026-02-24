@@ -4,15 +4,16 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-from pipeline.graph import GRAPH, get_graph_headers, graph_get
+from pipeline.graph import GRAPH, get_graph_headers, graph_get, get_sharepoint_root
 
 
-SHAREPOINT_ROOT = Path(r"C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline")
+# SHAREPOINT_ROOT = Path(r"C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline")
+SHAREPOINT_ROOT = get_sharepoint_root()
 
-STAGING_FACT_TASKS_PATH = SHAREPOINT_ROOT / "data" / "staging" / "Fact_Tasks.csv"
-PROD_DIM_LABELS_PATH = SHAREPOINT_ROOT / "data" / "prod" / "Dim_Labels.csv"
-STAGING_DIM_LABELS_PATH = SHAREPOINT_ROOT / "data" / "staging" / "Dim_Labels.csv"
-print("Pullinf Labels...")
+STAGING_FACT_TASKS_PATH = SHAREPOINT_ROOT / "staging" / "Fact_Tasks.csv"
+PROD_DIM_LABELS_PATH = SHAREPOINT_ROOT / "prod" / "Dim_Labels.csv"
+STAGING_DIM_LABELS_PATH = SHAREPOINT_ROOT / "staging" / "Dim_Labels.csv"
+print("Pulling Labels...")
 
 def build_dim_label_out(df_tasks: pd.DataFrame, headers: dict) -> pd.DataFrame:
     # -----------------------------

@@ -4,15 +4,15 @@ from pathlib import Path
 import datetime as dt
 
 
-from pipeline.graph import GRAPH, get_graph_headers, graph_get_all, graph_get
+from pipeline.graph import GRAPH, get_graph_headers, graph_get_all, graph_get, get_sharepoint_root
 
-SHAREPOINT_ROOT = Path(r"C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline")
+SHAREPOINT_ROOT = get_sharepoint_root()
 
-DATA_DIR = SHAREPOINT_ROOT / "data/prod"
+DATA_DIR = SHAREPOINT_ROOT / "prod"
 DIM_EVENTS_PATH = DATA_DIR / "Dim_Events.csv"
 
 
-STAGING_DIR = SHAREPOINT_ROOT / "data/staging"
+STAGING_DIR = SHAREPOINT_ROOT / "staging"
 STAGING_FACT_TASKS_PATH = STAGING_DIR / "Fact_Tasks.csv"
 
 

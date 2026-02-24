@@ -9,6 +9,44 @@ import time
 import random
 import requests
 
+_ENV_LOADED = False
+
+def load_env(env_path: Path | None = None) -> Path:
+    """
+    Load .env once and return the resolved env_path used.
+    """
+    global _ENV_LOADED
+
+    if env_path is None:
+        project_root = Path(__file__).resolve().parents[2]
+        env_path = project_root / ".env"
+
+    if not _ENV_LOADED:
+        load_dotenv(dotenv_path=env_path, override=False)
+        _ENV_LOADED = True
+
+    return env_path
+
+
+def get_sharepoint_root(env_path: Path | None = None) -> Path:
+    """
+    Returns the SharePoint root path from SHAREPOINT_ROOT env var.
+    """
+    load_env(env_path)
+
+    root = os.getenv("SHAREPOINT_ROOT")
+    if not root:
+        raise RuntimeError("Missing env var: SHAREPOINT_ROOT")
+
+    return Path(root)
+
+
+def sp_path(*parts: str, env_path: Path | None = None) -> Path:
+    """
+    Convenience helper: sp_path("prod", "Dim_Events.csv")
+    """
+    return get_sharepoint_root(env_path).joinpath(*parts)
+
 
 # Constants
 SCOPE = ["https://graph.microsoft.com/.default"]
@@ -23,7 +61,8 @@ def get_graph_headers(env_path: Path | None = None) -> dict:
         project_root = Path(__file__).resolve().parents[2]
         env_path = project_root / ".env"
 
-    load_dotenv(dotenv_path=env_path, override=False)
+    load_dotenv(env_path)
+
 
     tenant_id = os.getenv("TENANT_ID")
     client_id = os.getenv("CLIENT_ID")

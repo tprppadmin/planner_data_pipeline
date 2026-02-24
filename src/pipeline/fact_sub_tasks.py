@@ -4,14 +4,14 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-from pipeline.graph import GRAPH, get_graph_headers, graph_get
+from pipeline.graph import GRAPH, get_graph_headers, graph_get, get_sharepoint_root
 
 
-SHAREPOINT_ROOT = Path(r"C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline")
+SHAREPOINT_ROOT = get_sharepoint_root()
 
 
-PROD_FACT_TASKS_PATH = SHAREPOINT_ROOT / "data" / "staging" / "Fact_Tasks.csv"
-PROD_FACT_SUB_TASKS_PATH = SHAREPOINT_ROOT / "data" / "prod" / "Fact_Sub_Tasks.csv"
+PROD_FACT_TASKS_PATH = SHAREPOINT_ROOT / "staging" / "Fact_Tasks.csv"
+PROD_FACT_SUB_TASKS_PATH = SHAREPOINT_ROOT / "prod" / "Fact_Sub_Tasks.csv"
 
 
 def get_user(user_id: str, headers: dict) -> dict:

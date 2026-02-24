@@ -319,3 +319,127 @@ Traceback (most recent call last):
   File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 659, in send
     raise ConnectionError(err, request=request)
 requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+20260223_171100,pipeline.dim_events,2026-02-23 17:11:00,2026-02-23 17:14:54,233.6,failed,"Exit code 1. Traceback (most recent call last):
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\TPRPowerPlatformAdmi\\TP Caterers\\TCP BI - Documents\\Data\\planner_data_pipeline\\data\\prod'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\TPRPowerPlatformAdmi\\TP Caterers\\TCP BI - Documents\\Data\\planner_data_pipeline\\data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\TPRPowerPlatformAdmi\\TP Caterers\\TCP BI - Documents\\Data\\planner_data_pipeline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\TPRPowerPlatformAdmi\\TP Caterers\\TCP BI - Documents\\Data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\TPRPowerPlatformAdmi\\TP Caterers\\TCP BI - Documents'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\TPRPowerPlatformAdmi\\TP Caterers'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\dim_events.py"", line 332, in <module>
+    main()
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\dim_events.py"", line 327, in main
+    _final = upsert_dim_events(df_new)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\dim_events.py"", line 317, in upsert_dim_events
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  [Previous line repeated 3 more times]
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\TPRPowerPlatformAdmi'"
+20260223_231640,pipeline.dim_events,2026-02-23 23:16:40,2026-02-23 23:20:37,237.5,failed,"Exit code 1. Traceback (most recent call last):
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\TPRPowerPlatformAdmi\\TP Caterers\\TCP BI - Documents\\Data\\planner_data_pipeline\\data\\prod'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\TPRPowerPlatformAdmi\\TP Caterers\\TCP BI - Documents\\Data\\planner_data_pipeline\\data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\TPRPowerPlatformAdmi\\TP Caterers\\TCP BI - Documents\\Data\\planner_data_pipeline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\TPRPowerPlatformAdmi\\TP Caterers\\TCP BI - Documents\\Data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\TPRPowerPlatformAdmi\\TP Caterers\\TCP BI - Documents'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\TPRPowerPlatformAdmi\\TP Caterers'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\dim_events.py"", line 332, in <module>
+    main()
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\dim_events.py"", line 327, in main
+    _final = upsert_dim_events(df_new)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\dim_events.py"", line 317, in upsert_dim_events
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  [Previous line repeated 3 more times]
+  File ""C:\Users\criss\anaconda3\Lib\pathlib.py"", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\TPRPowerPlatformAdmi'"

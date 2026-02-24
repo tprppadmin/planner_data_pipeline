@@ -2,15 +2,18 @@ import pandas as pd
 import requests
 from pathlib import Path
 
-from pipeline.graph import GRAPH, get_graph_headers, graph_get_all
+from pipeline.graph import GRAPH, get_graph_headers, graph_get_all, get_sharepoint_root
 
 
-SHAREPOINT_ROOT = Path(r"C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline")
+# SHAREPOINT_ROOT = Path(r"C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline")
+SHAREPOINT_ROOT = get_sharepoint_root()
+STAGING_FACT_TASKS_PATH = SHAREPOINT_ROOT / "staging" / "Fact_Tasks.csv"
 
-STAGING_FACT_TASKS_PATH = SHAREPOINT_ROOT / "data" / "staging" / "Fact_Tasks.csv"
+PROD_DIM_BUCKETS_PATH = SHAREPOINT_ROOT / "prod" / "Dim_Buckets.csv"
+STAGING_DIM_BUCKETS_PATH = SHAREPOINT_ROOT / "staging" / "Dim_Buckets.csv"
 
-PROD_DIM_BUCKETS_PATH = SHAREPOINT_ROOT / "data" / "prod" / "Dim_Buckets.csv"
-STAGING_DIM_BUCKETS_PATH = SHAREPOINT_ROOT / "data" / "staging" / "Dim_Buckets.csv"
+
+
 
 
 def pull_buckets(headers: dict) -> pd.DataFrame:

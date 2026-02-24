@@ -1,20 +1,29 @@
 import datetime as dt
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
 import numpy as np
 import pandas as pd
 import requests
 
-from pipeline.graph import GRAPH, get_graph_headers, graph_get_all
+from pipeline.graph import GRAPH, get_graph_headers, graph_get_all, get_sharepoint_root
 
 
 # -----------------------------
 # Path helpers (works from any folder)
 # -----------------------------
-SHAREPOINT_ROOT = Path(r"C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\data")
+# SHAREPOINT_ROOT = Path(r"C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\data")
 
+# DATA_DIR = SHAREPOINT_ROOT / "prod"
+# DIM_EVENTS_PATH = DATA_DIR / "Dim_Events.csv"
+
+SHAREPOINT_ROOT = get_sharepoint_root()
+
+print(SHAREPOINT_ROOT)
 DATA_DIR = SHAREPOINT_ROOT / "prod"
 DIM_EVENTS_PATH = DATA_DIR / "Dim_Events.csv"
+
 
 # -----------------------------
 # Transform helpers
