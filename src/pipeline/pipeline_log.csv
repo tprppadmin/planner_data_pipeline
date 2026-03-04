@@ -449,3 +449,526 @@ PermissionError: [WinError 5] Access is denied: 'C:\\Users\\TPRPowerPlatformAdmi
 20260224_102938,pipeline.dim_buckets,2026-02-24 11:23:19,2026-02-24 11:27:04,224.7,success,
 20260224_102938,pipeline.fact_sub_tasks,2026-02-24 11:27:04,2026-02-24 12:17:22,3019.0,success,
 20260224_102938,pipeline.fact_tasks_prod,2026-02-24 12:17:22,2026-02-24 12:17:29,6.8,success,
+20260225_094719,pipeline.dim_events,2026-02-25 09:47:19,2026-02-25 09:54:57,458.3,success,
+20260225_094719,pipeline.fact_tasks_staging,2026-02-25 09:54:57,2026-02-25 10:41:01,2763.7,success,
+20260225_094719,pipeline.dim_labels,2026-02-25 10:41:01,2026-02-25 10:44:58,237.1,success,
+20260225_094719,pipeline.dim_buckets,2026-02-25 10:44:58,2026-02-25 10:49:01,243.1,success,
+20260225_094719,pipeline.fact_sub_tasks,2026-02-25 10:49:01,2026-02-25 11:42:58,3236.4,success,
+20260225_094719,pipeline.fact_tasks_prod,2026-02-25 11:42:58,2026-02-25 11:43:03,5.4,success,
+20260225_120230,pipeline.dim_events,2026-02-25 12:02:30,2026-02-25 12:10:16,465.6,success,
+20260225_120230,pipeline.fact_tasks_staging,2026-02-25 12:10:16,2026-02-25 12:57:48,2852.3,success,
+20260225_120230,pipeline.dim_labels,2026-02-25 12:57:48,2026-02-25 13:01:51,243.2,success,
+20260225_120230,pipeline.dim_buckets,2026-02-25 13:01:51,2026-02-25 13:06:02,250.4,success,
+20260225_120230,pipeline.fact_sub_tasks,2026-02-25 13:06:02,2026-02-25 13:59:56,3234.4,success,
+20260225_120230,pipeline.fact_tasks_prod,2026-02-25 13:59:56,2026-02-25 14:00:02,5.3,success,
+20260225_213537,pipeline.dim_events,2026-02-25 21:35:37,2026-02-25 21:43:14,457.6,success,
+20260225_213537,pipeline.fact_tasks_staging,2026-02-25 21:43:14,2026-02-25 22:30:41,2846.9,success,
+20260225_213537,pipeline.dim_labels,2026-02-25 22:30:41,2026-02-25 22:34:42,240.7,success,
+20260225_213537,pipeline.dim_buckets,2026-02-25 22:34:42,2026-02-25 22:38:48,245.8,success,
+20260225_213537,pipeline.fact_sub_tasks,2026-02-25 22:38:48,2026-02-25 22:50:55,727.2,failed,"Exit code 1. Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\connection.py"", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\socket.py"", line 976, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 488, in _make_request
+    raise new_e
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 464, in _make_request
+    self._validate_conn(conn)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 1093, in _validate_conn
+    conn.connect()
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='graph.microsoft.com', port=443): Failed to resolve 'graph.microsoft.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\retry.py"", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='graph.microsoft.com', port=443): Max retries exceeded with url: /v1.0/planner/tasks/3vcUlTKfNUqmlXzeAudojWUAJv_6/details (Caused by NameResolutionError(""HTTPSConnection(host='graph.microsoft.com', port=443): Failed to resolve 'graph.microsoft.com' ([Errno 11001] getaddrinfo failed)""))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\fact_sub_tasks.py"", line 226, in <module>
+    main()
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\fact_sub_tasks.py"", line 213, in main
+    task_detail_rows = pull_task_details(unique_task_ids, headers=headers)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\fact_sub_tasks.py"", line 29, in pull_task_details
+    details = graph_get(
+              ^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\graph.py"", line 102, in graph_get
+    r = requests.get(url, headers=headers, params=params, timeout=timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\api.py"", line 73, in get
+    return request(""get"", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='graph.microsoft.com', port=443): Max retries exceeded with url: /v1.0/planner/tasks/3vcUlTKfNUqmlXzeAudojWUAJv_6/details (Caused by NameResolutionError(""HTTPSConnection(host='graph.microsoft.com', port=443): Failed to resolve 'graph.microsoft.com' ([Errno 11001] getaddrinfo failed)""))"
+20260226_104305,pipeline.dim_events,2026-02-26 10:43:05,2026-02-26 10:50:59,474.3,success,
+20260226_104305,pipeline.fact_tasks_staging,2026-02-26 10:50:59,2026-02-26 11:39:11,2891.7,success,
+20260226_104305,pipeline.dim_labels,2026-02-26 11:39:11,2026-02-26 11:43:39,268.0,success,
+20260226_104305,pipeline.dim_buckets,2026-02-26 11:43:39,2026-02-26 11:47:56,257.1,success,
+20260226_104305,pipeline.fact_sub_tasks,2026-02-26 11:47:56,2026-02-26 12:44:17,3380.8,success,
+20260226_104305,pipeline.fact_tasks_prod,2026-02-26 12:44:17,2026-02-26 12:44:22,5.5,success,
+20260226_132534,pipeline.dim_events,2026-02-26 13:25:34,2026-02-26 13:33:32,478.0,success,
+20260226_132534,pipeline.fact_tasks_staging,2026-02-26 13:33:32,2026-02-26 14:22:05,2912.7,success,
+20260226_132534,pipeline.dim_labels,2026-02-26 14:22:05,2026-02-26 14:26:05,239.7,success,
+20260226_132534,pipeline.dim_buckets,2026-02-26 14:26:05,2026-02-26 14:26:06,1.1,failed,"Exit code 1. Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\connection.py"", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\socket.py"", line 976, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 488, in _make_request
+    raise new_e
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 464, in _make_request
+    self._validate_conn(conn)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 1093, in _validate_conn
+    conn.connect()
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='login.microsoftonline.com', port=443): Failed to resolve 'login.microsoftonline.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\retry.py"", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='login.microsoftonline.com', port=443): Max retries exceeded with url: /a13146aa-025a-4b37-832a-521293c8ff15/v2.0/.well-known/openid-configuration (Caused by NameResolutionError(""HTTPSConnection(host='login.microsoftonline.com', port=443): Failed to resolve 'login.microsoftonline.com' ([Errno 11001] getaddrinfo failed)""))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\dim_buckets.py"", line 156, in <module>
+    main()
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\dim_buckets.py"", line 137, in main
+    headers = get_graph_headers()
+              ^^^^^^^^^^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\graph.py"", line 81, in get_graph_headers
+    app = msal.ConfidentialClientApplication(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\msal\application.py"", line 645, in __init__
+    self.authority = Authority(
+                     ^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\msal\authority.py"", line 79, in __init__
+    openid_config = tenant_discovery(
+                    ^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\msal\authority.py"", line 210, in tenant_discovery
+    resp = http_client.get(tenant_discovery_endpoint, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\msal\individual_cache.py"", line 273, in wrapper
+    value = function(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\msal\throttled_http_client.py"", line 99, in get
+    return NormalizedResponse(self.http_client.get(*args, **kwargs))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 602, in get
+    return self.request(""GET"", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='login.microsoftonline.com', port=443): Max retries exceeded with url: /a13146aa-025a-4b37-832a-521293c8ff15/v2.0/.well-known/openid-configuration (Caused by NameResolutionError(""HTTPSConnection(host='login.microsoftonline.com', port=443): Failed to resolve 'login.microsoftonline.com' ([Errno 11001] getaddrinfo failed)""))"
+20260226_225433,pipeline.dim_events,2026-02-26 22:54:33,2026-02-26 23:02:26,473.5,success,
+20260226_225433,pipeline.fact_tasks_staging,2026-02-26 23:02:26,2026-02-26 23:50:22,2876.0,success,
+20260226_225433,pipeline.dim_labels,2026-02-26 23:50:22,2026-02-26 23:54:19,236.5,success,
+20260226_225433,pipeline.dim_buckets,2026-02-26 23:54:19,2026-02-26 23:58:23,243.8,success,
+20260227_092656,pipeline.dim_events,2026-02-27 09:26:56,2026-02-27 09:35:03,487.3,success,
+20260227_092656,pipeline.fact_tasks_staging,2026-02-27 09:35:03,2026-02-27 10:23:44,2921.2,success,
+20260227_092656,pipeline.dim_labels,2026-02-27 10:23:44,2026-02-27 10:27:44,239.5,success,
+20260227_092656,pipeline.dim_buckets,2026-02-27 10:27:44,2026-02-27 10:32:06,262.0,success,
+20260227_092656,pipeline.fact_sub_tasks,2026-02-27 10:32:06,2026-02-27 11:27:57,3351.1,success,
+20260227_092656,pipeline.fact_tasks_prod,2026-02-27 11:27:57,2026-02-27 11:28:04,7.4,success,
+20260227_135743,pipeline.dim_events,2026-02-27 13:57:43,2026-02-27 14:05:25,462.1,success,
+20260227_135743,pipeline.fact_tasks_staging,2026-02-27 14:05:25,2026-02-27 14:55:04,2979.0,success,
+20260227_135743,pipeline.dim_labels,2026-02-27 14:55:04,2026-02-27 14:59:17,253.4,success,
+20260227_135743,pipeline.dim_buckets,2026-02-27 14:59:17,2026-02-27 15:03:35,257.7,success,
+20260227_135743,pipeline.fact_sub_tasks,2026-02-27 15:03:35,2026-02-27 16:00:10,3394.7,success,
+20260227_135743,pipeline.fact_tasks_prod,2026-02-27 16:00:10,2026-02-27 16:00:16,5.6,success,
+20260302_101503,pipeline.dim_events,2026-03-02 10:15:03,2026-03-02 10:22:42,459.0,success,
+20260302_101503,pipeline.fact_tasks_staging,2026-03-02 10:22:42,2026-03-02 11:09:02,2780.2,success,
+20260302_101503,pipeline.dim_labels,2026-03-02 11:09:02,2026-03-02 11:13:05,242.8,success,
+20260302_101503,pipeline.dim_buckets,2026-03-02 11:13:05,2026-03-02 11:17:18,253.1,success,
+20260302_101503,pipeline.fact_sub_tasks,2026-03-02 11:17:18,2026-03-02 12:13:04,3345.5,success,
+20260302_101503,pipeline.fact_tasks_prod,2026-03-02 12:13:04,2026-03-02 12:13:09,5.8,success,
+20260302_161853,pipeline.dim_events,2026-03-02 16:18:53,2026-03-02 16:26:51,478.5,success,
+20260302_161853,pipeline.fact_tasks_staging,2026-03-02 16:26:51,2026-03-02 17:15:57,2946.1,success,
+20260302_161853,pipeline.dim_labels,2026-03-02 17:15:57,2026-03-02 17:20:05,247.4,success,
+20260302_161853,pipeline.dim_buckets,2026-03-02 17:20:05,2026-03-02 17:24:09,243.9,success,
+20260302_161853,pipeline.fact_sub_tasks,2026-03-02 17:24:09,2026-03-02 17:33:53,584.2,failed,"Exit code 1. Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 464, in _make_request
+    self._validate_conn(conn)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 1093, in _validate_conn
+    conn.connect()
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1041, in _create
+    self.do_handshake()
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:983: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\retry.py"", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\util.py"", line 39, in reraise
+    raise value
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 488, in _make_request
+    raise new_e
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 466, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='graph.microsoft.com', port=443): Read timed out. (read timeout=90)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\fact_sub_tasks.py"", line 226, in <module>
+    main()
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\fact_sub_tasks.py"", line 213, in main
+    task_detail_rows = pull_task_details(unique_task_ids, headers=headers)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\fact_sub_tasks.py"", line 29, in pull_task_details
+    details = graph_get(
+              ^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\graph.py"", line 102, in graph_get
+    r = requests.get(url, headers=headers, params=params, timeout=timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\api.py"", line 73, in get
+    return request(""get"", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 690, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='graph.microsoft.com', port=443): Read timed out. (read timeout=90)"
+20260302_183636,pipeline.dim_events,2026-03-02 18:36:36,2026-03-02 18:44:24,468.3,success,
+20260302_183636,pipeline.fact_tasks_staging,2026-03-02 18:44:24,2026-03-02 19:35:01,3037.2,success,
+20260302_183636,pipeline.dim_labels,2026-03-02 19:35:01,2026-03-02 19:39:17,256.2,success,
+20260302_183636,pipeline.dim_buckets,2026-03-02 19:39:17,2026-03-02 19:43:33,255.9,success,
+20260302_183636,pipeline.fact_sub_tasks,2026-03-02 19:43:33,2026-03-02 20:42:11,3517.8,success,
+20260302_183636,pipeline.fact_tasks_prod,2026-03-02 20:42:11,2026-03-02 20:42:17,5.6,success,
+20260303_181250,pipeline.dim_events,2026-03-03 18:12:50,2026-03-03 18:24:39,709.2,success,
+20260303_181250,pipeline.fact_tasks_staging,2026-03-03 18:24:39,2026-03-03 19:37:42,4382.5,success,
+20260303_181250,pipeline.dim_labels,2026-03-03 19:37:42,2026-03-03 19:43:56,374.5,success,
+20260303_181250,pipeline.dim_buckets,2026-03-03 19:43:56,2026-03-03 19:50:10,373.9,success,
+20260303_181250,pipeline.fact_sub_tasks,2026-03-03 19:50:10,2026-03-03 19:52:58,167.8,failed,"Exit code 1. Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 488, in _make_request
+    raise new_e
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 464, in _make_request
+    self._validate_conn(conn)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 1093, in _validate_conn
+    conn.connect()
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1041, in _create
+    self.do_handshake()
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\retry.py"", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\util.py"", line 38, in reraise
+    raise value.with_traceback(tb)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 488, in _make_request
+    raise new_e
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 464, in _make_request
+    self._validate_conn(conn)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 1093, in _validate_conn
+    conn.connect()
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1041, in _create
+    self.do_handshake()
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\fact_sub_tasks.py"", line 226, in <module>
+    main()
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\fact_sub_tasks.py"", line 213, in main
+    task_detail_rows = pull_task_details(unique_task_ids, headers=headers)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\fact_sub_tasks.py"", line 29, in pull_task_details
+    details = graph_get(
+              ^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\graph.py"", line 102, in graph_get
+    r = requests.get(url, headers=headers, params=params, timeout=timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\api.py"", line 73, in get
+    return request(""get"", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 659, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+20260304_095236,pipeline.dim_events,2026-03-04 09:52:36,2026-03-04 10:01:19,523.1,success,
+20260304_095236,pipeline.fact_tasks_staging,2026-03-04 10:01:19,2026-03-04 10:52:40,3080.9,success,
+20260304_095236,pipeline.dim_labels,2026-03-04 10:52:40,2026-03-04 10:56:54,254.2,success,
+20260304_095236,pipeline.dim_buckets,2026-03-04 10:56:54,2026-03-04 11:01:10,256.1,success,
+20260304_095236,pipeline.fact_sub_tasks,2026-03-04 11:01:10,2026-03-04 12:38:25,5834.7,failed,"Exit code 1. Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 488, in _make_request
+    raise new_e
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 464, in _make_request
+    self._validate_conn(conn)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 1093, in _validate_conn
+    conn.connect()
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1041, in _create
+    self.do_handshake()
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\retry.py"", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\util.py"", line 38, in reraise
+    raise value.with_traceback(tb)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 488, in _make_request
+    raise new_e
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 464, in _make_request
+    self._validate_conn(conn)
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connectionpool.py"", line 1093, in _validate_conn
+    conn.connect()
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\connection.py"", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\urllib3\util\ssl_.py"", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1041, in _create
+    self.do_handshake()
+  File ""C:\Users\criss\AppData\Local\Programs\Python\Python312\Lib\ssl.py"", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""<frozen runpy>"", line 198, in _run_module_as_main
+  File ""<frozen runpy>"", line 88, in _run_code
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\fact_sub_tasks.py"", line 226, in <module>
+    main()
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\fact_sub_tasks.py"", line 213, in main
+    task_detail_rows = pull_task_details(unique_task_ids, headers=headers)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\fact_sub_tasks.py"", line 29, in pull_task_details
+    details = graph_get(
+              ^^^^^^^^^^
+  File ""C:\clients\tpr\planner_data_pipeline\src\pipeline\graph.py"", line 102, in graph_get
+    r = requests.get(url, headers=headers, params=params, timeout=timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\api.py"", line 73, in get
+    return request(""get"", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\api.py"", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\sessions.py"", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\criss\TP Caterers\TCP BI - Documents\Data\planner_data_pipeline\.venv\Lib\site-packages\requests\adapters.py"", line 659, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
