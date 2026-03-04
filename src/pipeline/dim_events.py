@@ -169,7 +169,7 @@ def build_dim_events(headers: dict) -> pd.DataFrame:
     print("Extracting Planners")
     plan_rows = []
 
-    for group_id in df_groups_events["GroupID"]:
+    for group_id in df_groups_events["GroupID"][:50]:
         try:
             plans = graph_get_all(f"{GRAPH}/groups/{group_id}/planner/plans", headers=headers)
         except requests.HTTPError as e:
@@ -253,7 +253,7 @@ def upsert_dim_events(df_new: pd.DataFrame) -> pd.DataFrame:
         # first run: just write it
         final_df = df_new.copy()
     else:
-        df_current = pd.read_csv(DIM_EVENTS_PATH, dtype={"EventIdDateKey": "string"})
+        df_current = pd.read_csv(DIM_EVENTS_PATH)
 
         if not df_current["EventIdDateKey"].is_unique:
             raise ValueError("Existing Dim_Events.csv has duplicate EventIdDateKey values.")
@@ -264,6 +264,7 @@ def upsert_dim_events(df_new: pd.DataFrame) -> pd.DataFrame:
         df_current = df_current.set_index("EventIdDateKey")
         df_new = df_new.set_index("EventIdDateKey")
 
+        print(df_current.dtypes[df_current.dtypes.astype(str).str.contains("string|str")])
         # update existing
         df_current.update(df_new)
 
