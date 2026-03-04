@@ -169,7 +169,7 @@ def build_dim_events(headers: dict) -> pd.DataFrame:
     print("Extracting Planners")
     plan_rows = []
 
-    for group_id in df_groups_events["GroupID"][:50]:
+    for group_id in df_groups_events["GroupID"]:
         try:
             plans = graph_get_all(f"{GRAPH}/groups/{group_id}/planner/plans", headers=headers)
         except requests.HTTPError as e:
@@ -264,7 +264,12 @@ def upsert_dim_events(df_new: pd.DataFrame) -> pd.DataFrame:
         df_current = df_current.set_index("EventIdDateKey")
         df_new = df_new.set_index("EventIdDateKey")
 
-        print(df_current.dtypes[df_current.dtypes.astype(str).str.contains("string|str")])
+        common_cols = df_current.columns.intersection(df_new.columns)
+
+        # make update permissive across environments
+        df_current[common_cols] = df_current[common_cols].astype("object")
+        df_new[common_cols] = df_new[common_cols].astype("object")
+
         # update existing
         df_current.update(df_new)
 
