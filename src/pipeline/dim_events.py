@@ -253,7 +253,7 @@ def upsert_dim_events(df_new: pd.DataFrame) -> pd.DataFrame:
         # first run: just write it
         final_df = df_new.copy()
     else:
-        df_current = pd.read_csv(DIM_EVENTS_PATH, dtype={"EventIdDateKey": "string"})
+        df_current = pd.read_csv(DIM_EVENTS_PATH)
 
         if not df_current["EventIdDateKey"].is_unique:
             raise ValueError("Existing Dim_Events.csv has duplicate EventIdDateKey values.")
@@ -263,6 +263,12 @@ def upsert_dim_events(df_new: pd.DataFrame) -> pd.DataFrame:
 
         df_current = df_current.set_index("EventIdDateKey")
         df_new = df_new.set_index("EventIdDateKey")
+
+        common_cols = df_current.columns.intersection(df_new.columns)
+
+        # make update permissive across environments
+        df_current[common_cols] = df_current[common_cols].astype("object")
+        df_new[common_cols] = df_new[common_cols].astype("object")
 
         # update existing
         df_current.update(df_new)
