@@ -190,6 +190,12 @@ def upsert_to_prod(df_subtasks_last_month: pd.DataFrame) -> None:
     new_i = df_new.set_index("SubTaskIDKey")
 
 
+    # make update permissive across environments
+    common_cols = cur_i.columns.intersection(new_i.columns)
+
+    cur_i[common_cols] = cur_i[common_cols].astype("object")
+    new_i[common_cols] = new_i[common_cols].astype("object")
+
     cur_i.update(new_i)
     to_add = new_i.loc[new_i.index.difference(cur_i.index)]
 
