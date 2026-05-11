@@ -224,8 +224,10 @@ def main():
     cur = df_tasks_current.set_index("TaskId")
     new = df_events_prod_last_month.set_index("TaskId")
 
-    cur_filtered = cur.loc[~cur.index.isin(new.index)].copy()
-    df_tasks_out = pd.concat([cur_filtered, new], axis=0).reset_index()
+    plans_in_new_pull = new["PlanID"].unique()
+    cur_other_plans = cur[~cur["PlanID"].isin(plans_in_new_pull)]
+
+    df_tasks_out = pd.concat([cur_other_plans, new], axis=0).reset_index()
 
     print("Rows before:", len(df_tasks_current))
     print("Rows in last month:", len(df_events_prod_last_month))
